@@ -1,0 +1,23 @@
+# linux-root-file-system
+LINUX ROOT FILE SYSTEM 
+
+bin - binary files for local user executing commands
+boot - booting information of an OS
+content - content of the OS
+dev - device information
+etc - system configuration files
+home - local user home directory 
+lib - library files for 32 bit OS
+lib64 -  library files for 64 bit OS
+media - external device will mount in this location
+mnt - temporary mounting point
+opt - 3rd party app will be available here
+proc - process related information
+root - root user home directory
+run - run time update
+sbin - super user binary file
+srv - service related information
+sys - system related information
+tmp - temporary files
+usr - user files
+var - variable length
