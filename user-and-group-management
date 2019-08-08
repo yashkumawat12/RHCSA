@@ -1,0 +1,44 @@
+#user-and-group-management
+
+linux OS have 3 types of user-
+1-root user
+2-system user
+3-local user
+
+root user id = 0
+system user id = 1-999
+local user id = 1000-onwards
+
+user have home directory = /home ( we can create 16000 user in this directory )
+
+to see id of user => id <username>
+e.g., id student
+      #uid 1000
+to add a user => useradd <username>
+to add a password to a user => passwd <username>
+
+user configuration file =>cat /etc/passwd
+  u1:x:1001:1001::/home/u1:/bin/bash
+  u1=username
+  x=encrypted
+  1001=user id
+  1001=user group id
+  ::=command field
+  /home/u1=user home directory
+  /bin/bash=user shell
+  
+to see bottom 2 line of a file = tail -2 /etc/passwd
+to see top 2 line of a file = head -2 /etc/passwd
+user password file = /etc/shadow
+
+
+#USER-MODIFICATION
+
+usermod -u 1234 u1 => to change user id
+usermod -s /sbin/nologin u1 => to change shell
+usermod -c user1 u1 => to change command name
+  e.g., u1:x:1234:1001:user1:/home/u1:/bin/bash
+su -u1 =>to switch user
+usermod -d /test u1 =>to change user directory
+usermod -l user2 u2 => to rename user
+userdel u1 => to delete user
